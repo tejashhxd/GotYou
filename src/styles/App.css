@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .sidebar ul li a {
+  color: white;
+}
+
+body.dark-mode .content-card,
+body.dark-mode .content-head-text,
+body.dark-mode .content-body-text,
+body.dark-mode .content-image-text {
+  color: white;
+}
+
+body.dark-mode #headline h2 {
+  color: white;
+}
+
+body.dark-mode .nav {
+  background-color: #2c2c2c;
+  color: white;
+}
+
+body.dark-mode .nav-right {
+  color: white;
+}
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav {
+  background-color: #2c2c2c;
+  color: white;
+}
