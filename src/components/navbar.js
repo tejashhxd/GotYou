@@ -1,6 +1,5 @@
-import "H:\\codes\\react\\gotyou-react\\src\\styles\\navbar.css";
-
-export default function navbar() {
+import "../styles/navbar.css";
+export default function navbar({ onMenuClick, menuButtonRef }) {
   let theme = 1;
 
   function changeTheme() {
@@ -22,7 +21,12 @@ export default function navbar() {
       <header>
         <div className="nav">
           <div className="nav-left">
-            <i className="fa-solid fa-bars" id="nav-bar"></i>
+            <i
+              className="fa-solid fa-bars"
+              id="nav-bar"
+              onClick={onMenuClick}
+              ref={menuButtonRef}
+            ></i>
           </div>
           <div className="nav-right" id="logo">
             <a>GotYou</a>

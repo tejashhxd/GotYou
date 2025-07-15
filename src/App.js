@@ -1,16 +1,39 @@
-import Navbar from "./components/navbar.js";
-import Sidebar from "./components/sidebar.js";
-import Main from "./components/main.js";
-import Footer from "./components/footer.js";
+import React, { useState, useRef } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import Sidebar from "./components/sidebar";
+import Dashboard from "./components/Dashboard";
+import LeetcodeTracker from "./components/LeetcodeTracker";
+import GithubTracker from "./components/GithubTracker";
+import Planner from "./components/Planner";
+import "./styles/App.css";
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const menuButtonRef = useRef(null);
+
   return (
-    <>
-      <Navbar />
-      <Sidebar />
-      <Main />
+    <Router>
+      <Navbar
+        onMenuClick={() => setIsSidebarOpen(true)}
+        menuButtonRef={menuButtonRef}
+      />
+      <Sidebar
+        isOpen={isSidebarOpen}
+        closeSidebar={() => setIsSidebarOpen(false)}
+        menuButtonRef={menuButtonRef}
+      />
+      <Routes>
+        <Route path="/Main" element={<Main />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Planner" element={<Planner />} />
+        <Route path="/GithubTracker" element={<GithubTracker />} />
+        <Route path="/LeetcodeTracker" element={<LeetcodeTracker />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

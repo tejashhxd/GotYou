@@ -1,4 +1,4 @@
-import "H:\\codes\\react\\gotyou-react\\src\\styles\\main.css"
+import "../styles/main.css";
 
 export default function main() {
   return (
@@ -9,7 +9,8 @@ export default function main() {
           <br />
           <a href="#" id="openLink">
             <p>
-              Lets Get Started <i className="fa-solid fa-square-arrow-up-right"></i>
+              Lets Get Started{" "}
+              <i className="fa-solid fa-square-arrow-up-right"></i>
             </p>
           </a>
         </div>

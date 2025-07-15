@@ -57,12 +57,3 @@
   align-items: center;
   margin-left: 5px;
 }
-
-/* Dark mode */
-body.dark-mode .sidebar {
-  background-color: #1e1e1e;
-}
-
-body.dark-mode .sidebar ul li a {
-  color: white;
-}

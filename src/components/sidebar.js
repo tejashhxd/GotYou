@@ -1,11 +1,43 @@
-import "H:\\codes\\react\\gotyou-react\\src\\styles\\sidebar.css"
-import { useState, useRef, useEffect } from "react";
+import "../styles/sidebar.css";
+import { Link } from "react-router-dom";
+import React from "react";
+import { useRef, useEffect } from "react";
 
-export default function sidebar() {
+export default function Sidebar({ isOpen, closeSidebar, menuButtonRef }) {
+  const SidebarRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        SidebarRef.current &&
+        !SidebarRef.current.contains(e.target) &&
+        !menuButtonRef.current.contains(e.target)
+      ) {
+        closeSidebar();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  const page = [
+    { lable: "Home", path: "/Main" },
+    { lable: "Dashboard", path: "/Dashboard" },
+    { lable: "Github Tracker", path: "/GithubTracker" },
+    { lable: "Leetcode Tracker", path: "/LeetcodeTracker" },
+    { lable: "Planner", path: "/Planner" },
+  ];
 
   return (
     <>
-      <div id="sidebar" className="sidebar">
+      <div
+        id="sidebar"
+        className={`sidebar ${isOpen ? "active" : ""}`}
+        ref={SidebarRef}
+      >
         <div className="user-info">
           <div id="userPfp"></div>
           <div id="userDetails">
@@ -13,21 +45,11 @@ export default function sidebar() {
           </div>
         </div>
         <ul>
-          <li>
-            <a href="user/">User</a>
-          </li>
-          <li>
-            <a href="dashboard/">Dashboard</a>
-          </li>
-          <li>
-            <a href="GitHub-Tracker/">GitHub Tracker</a>
-          </li>
-          <li>
-            <a href="Leetcode-Tracker/">LeetCode Tracker</a>
-          </li>
-          <li>
-            <a href="planner/">Planner</a>
-          </li>
+          {page.map(({ lable, path }) => (
+            <li key={path}>
+              <Link to={path}>{lable}</Link>
+            </li>
+          ))}
         </ul>
       </div>
     </>

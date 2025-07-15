@@ -92,15 +92,3 @@ main #headline h2 {
 #openLink {
   color: rgb(156, 0, 228);
 }
-
-/* Dark mode */
-body.dark-mode .content-card,
-body.dark-mode .content-head-text,
-body.dark-mode .content-body-text,
-body.dark-mode .content-image-text {
-  color: white;
-}
-
-body.dark-mode #headline h2 {
-  color: white;
-}
