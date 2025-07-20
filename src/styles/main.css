@@ -92,3 +92,15 @@ main #headline h2 {
 #openLink {
   color: rgb(156, 0, 228);
 }
+
+body.dark-mode .input #usernameInput {
+  background-color: white;
+}
+
+body.dark-mode .input #inputBtn {
+  background-color: #cccccc;
+}
+
+body.dark-mode .input #inputBtn i {
+  color: black;
+}

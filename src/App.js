@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
-import Footer from "./components/Footer";
 import Sidebar from "./components/sidebar";
 import Dashboard from "./components/Dashboard";
 import LeetcodeTracker from "./components/LeetcodeTracker";
@@ -32,7 +31,6 @@ function App() {
         <Route path="/GithubTracker" element={<GithubTracker />} />
         <Route path="/LeetcodeTracker" element={<LeetcodeTracker />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }

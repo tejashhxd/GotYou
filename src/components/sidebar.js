@@ -21,7 +21,7 @@ export default function Sidebar({ isOpen, closeSidebar, menuButtonRef }) {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, []);
+  }, [SidebarRef, menuButtonRef]);
 
   const page = [
     { lable: "Home", path: "/Main" },

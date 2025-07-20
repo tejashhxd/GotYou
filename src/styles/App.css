@@ -9,6 +9,18 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: #f0f4ff;
+}
+
+body.dark-mode #logo a {
+  color: white;
+}
+
+.clickable-icon {
+  cursor: pointer;
+}
+
 body.dark-mode .sidebar {
   background-color: #1e1e1e;
 }
@@ -45,4 +57,16 @@ body.dark-mode {
 body.dark-mode .nav {
   background-color: #2c2c2c;
   color: white;
+}
+
+body.dark-mode .data {
+  color: white;
+}
+
+body.dark-mode .search-top #search-title {
+  color: white;
+}
+body.dark-mode .gihubTracker-card {
+  color: white;
+  background-color: #2c2c2c;
 }

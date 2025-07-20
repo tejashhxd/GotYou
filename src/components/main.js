@@ -1,92 +1,88 @@
 import "../styles/main.css";
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 export default function main() {
   return (
     <>
-      <main>
+      <main id="HomepageMain">
         <div id="headline">
           <h2>Start Tracking Your Progress And Hobbies</h2>
           <br />
-          <a href="#" id="openLink">
-            <p>
+          <p>
+            <Link to="./Dashboard" id="openLink">
               Lets Get Started{" "}
               <i className="fa-solid fa-square-arrow-up-right"></i>
-            </p>
-          </a>
+            </Link>
+          </p>
         </div>
 
         <div className="content-card" id="card1">
-          <div className="content-head">
-            <a href="#" className="content-head-text">
-              <b>Plan Your Day</b>
-            </a>
-          </div>
-          <div className="content-body">
-            <div className="content-image">
-              <a href="#" className="content-image-text">
-                <i className="fa-solid fa-layer-group"></i>
-              </a>
+          <Link to="/Planner">
+            <div className="content-head">
+              <b className="content-head-text">Plan Your Day</b>
             </div>
-            <div>
-              <a href="#" className="content-body-text">
-                <p>
+            <div className="content-body">
+              <div className="content-image">
+                <i className="fa-solid fa-layer-group content-image-text"></i>
+              </div>
+              <div>
+                <p className="content-body-text">
                   Stay productive and focused. Start organizing your day in
                   seconds.
                 </p>
-              </a>
-              <p className="contentLink">
-                <i className="fa-solid fa-arrow-right-long"></i>
-              </p>
+                <p className="contentLink">
+                  <i className="fa-solid fa-arrow-right-long"></i>
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="content-card" id="card2">
-          <div className="content-head">
-            <a href="#" className="content-head-text">
-              <b>Track Github Progress</b>
-            </a>
-          </div>
-          <div className="content-body">
-            <div className="content-image">
-              <a href="#" className="content-image-text">
-                <i className="fa-solid fa-code-branch"></i>
-              </a>
+          <Link to="/GithubTracker">
+            <div className="content-head">
+              <b className="content-head-text">Track Github Progress</b>
             </div>
-            <div>
-              <a href="#" className="content-body-text">
-                <p> See your open-source journey in beautiful graphs.</p>
-              </a>
-              <p className="contentLink">
-                <i className="fa-solid fa-arrow-right-long"></i>
-              </p>
+            <div className="content-body">
+              <div className="content-image">
+                <i className="fa-solid fa-code-branch content-image-text"></i>
+              </div>
+              <div>
+                <p className="content-body-text">
+                  See your open-source journey in beautiful graphs.
+                </p>
+                <p className="contentLink">
+                  <i className="fa-solid fa-arrow-right-long"></i>
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="content-card" id="card3">
-          <div className="content-head">
-            <a href="#" className="content-head-text">
-              <b>Grow Your Coding Skills</b>
-            </a>
-          </div>
-          <div className="content-body">
-            <div className="content-image">
-              <a href="#" className="content-image-text">
-                <i className="fa-solid fa-code"></i>
-              </a>
+          <Link to="/LeetcodeTracker">
+            <div className="content-head">
+              <b className="content-head-text">Grow Your Coding Skills</b>
             </div>
-            <div>
-              <a href="#" className="content-body-text">
-                <p>Track solved problems, rank shifts, and daily streaks.</p>
-              </a>
-              <p className="contentLink">
-                <i className="fa-solid fa-arrow-right-long"></i>
-              </p>
+            <div className="content-body">
+              <div className="content-image">
+                <i className="fa-solid fa-code content-image-text"></i>
+              </div>
+              <div>
+                <p className="content-body-text">
+                  Track solved problems, rank shifts, and daily streaks.
+                </p>
+                <p className="contentLink">
+                  <i className="fa-solid fa-arrow-right-long"></i>
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }

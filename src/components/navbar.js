@@ -1,20 +1,27 @@
 import "../styles/navbar.css";
-export default function navbar({ onMenuClick, menuButtonRef }) {
-  let theme = 1;
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+export default function Navbar({ onMenuClick, menuButtonRef }) {
+  const [theme, setTheme] = useState(0);
 
   function changeTheme() {
     if (theme === 1) {
       document.body.classList.toggle("dark-mode");
-      document.getElementById("themeBtn").classList.remove("fa-moon");
-      document.getElementById("themeBtn").classList.add("fa-sun");
-      theme = 0;
+      setTheme(0);
+      localStorage.setItem("theme", "light");
     } else {
       document.body.classList.toggle("dark-mode");
-      document.getElementById("themeBtn").classList.remove("fa-sun");
-      document.getElementById("themeBtn").classList.add("fa-moon");
-      theme = 1;
+      setTheme(1);
+      localStorage.setItem("theme", "dark");
     }
   }
+
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      setTheme(1);
+    }
+  }, []);
 
   return (
     <>
@@ -22,18 +29,22 @@ export default function navbar({ onMenuClick, menuButtonRef }) {
         <div className="nav">
           <div className="nav-left">
             <i
-              className="fa-solid fa-bars"
+              className="fa-solid fa-bars clickable-icon"
               id="nav-bar"
               onClick={onMenuClick}
               ref={menuButtonRef}
             ></i>
           </div>
-          <div className="nav-right" id="logo">
-            <a>GotYou</a>
+          <div className="nav-right">
+            <span id="logo">
+              <Link to="./Main">GotYou</Link>
+            </span>
           </div>
           <div id="theme">
             <i
-              className="fa-solid fa-sun"
+              className={`fa-solid fa-${
+                theme === 1 ? "sun" : "moon"
+              } clickable-icon`}
               id="themeBtn"
               onClick={changeTheme}
             ></i>

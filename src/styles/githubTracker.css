@@ -1,0 +1,180 @@
+.hide {
+  opacity: 0;
+}
+
+.view {
+  opacity: 1;
+}
+
+.seperate {
+  position: absolute;
+}
+
+#githubMain {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.data {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#inputText {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#usernameInput {
+  border: none;
+  height: 60px;
+  width: 70%;
+  border-radius: 15px 0 0 15px;
+  background-color: white;
+  text-align: center;
+}
+
+#inputBtn {
+  border: none;
+  height: 45px;
+  width: 55px;
+  margin-right: 5px;
+  border-radius: 30%;
+  background-color: black;
+}
+
+#inputBtn i {
+  color: white;
+}
+
+.userData {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  height: 60px;
+}
+
+.search-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 60px;
+}
+
+#search-title {
+  font-weight: 800;
+  color: rgb(19, 19, 19);
+  margin-top: 5px;
+}
+
+.search-logo {
+  background: linear-gradient(135deg, #a139f2, #1e90ff);
+  color: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnbg {
+  background-color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+}
+
+.gihubTracker-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 80%;
+}
+
+.user-profile {
+  height: 60px;
+}
+
+#user-logo {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #a139f2, #1e90ff);
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+#user-logo i {
+  color: white;
+}
+
+.graph {
+  height: 500px;
+}
+
+.data-icon {
+  height: 35px;
+  width: 35px;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 5px;
+}
+
+#commits {
+  height: 50px;
+}
+
+#commits i {
+  background: linear-gradient(135deg, #367cff, #0047ff);
+}
+
+#repository {
+  height: 50px;
+}
+
+#repository i {
+  background: linear-gradient(135deg, #34d058, #008000);
+}
+
+#activeDays {
+  height: 50px;
+}
+
+#activeDays i {
+  background: linear-gradient(135deg, #f66a0a, #d04000);
+}
