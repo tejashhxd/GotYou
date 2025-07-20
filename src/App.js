@@ -1,12 +1,12 @@
 import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Sidebar from "./components/sidebar";
 import Dashboard from "./components/Dashboard";
 import LeetcodeTracker from "./components/LeetcodeTracker";
 import GithubTracker from "./components/GithubTracker";
 import Planner from "./components/Planner";
+import Navbar from "./components/Navbar";
 import "./styles/App.css";
 
 function App() {
